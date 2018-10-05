@@ -101,7 +101,7 @@ $customers = Customer::active();
 $customers = $customers->paginate( 20 );
 ```
 
-You can also add new `ordderBy` and one `filter` methods;
+You can also add new `ordderBy` and `filter` methods;
 
 ```php
 <?php
@@ -111,6 +111,11 @@ FilterCustomers::addFilter( 'emailAddress', function( Builder $builder, Request 
     if( $email = $request->input( 'email' ) ) {
         $builder->where( 'email', 'like', "%{$email}%" );
     }
+});
+
+FilterCustomers::addOrderBy( 'emailAddress', function( Builder $builder, $order ) 
+{
+    $builder->orderBy( 'email', $order );
 });
 ```
 
