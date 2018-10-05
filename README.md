@@ -94,7 +94,7 @@ We can now us this to order our Customer model;
 ```php
 <?php 
 
-$customers = Customer::active();
+$customers = Customer::query();
 
 ( new FilterCustomers( $customers, request() ) )->filter();
 
