@@ -1,0 +1,22 @@
+{
+  "name": "lukesnowden/filterable",
+  "license": "MIT",
+  "type": "library",
+  "description" : "Laravel builder filter utility",
+  "require": {
+    "laravel/framework": "5.*"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Lukesnowden\\Filterable\\": "src/"
+    }
+  },
+  "scripts": {
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http" : false
+  }
+}
